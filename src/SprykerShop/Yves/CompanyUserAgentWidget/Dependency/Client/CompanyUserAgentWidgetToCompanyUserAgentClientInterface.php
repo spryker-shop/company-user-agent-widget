@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\CompanyUserCriteriaTransfer;
 
 interface CompanyUserAgentWidgetToCompanyUserAgentClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserCriteriaTransfer $companyUserCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserCollectionTransfer
-     */
     public function getCompanyUserCollectionByCriteria(CompanyUserCriteriaTransfer $companyUserCriteriaTransfer): CompanyUserCollectionTransfer;
 }

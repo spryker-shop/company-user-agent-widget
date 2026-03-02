@@ -21,11 +21,6 @@ class CompanyUserAgentWidgetDependencyProvider extends AbstractBundleDependencyP
      */
     public const CLIENT_COMPANY_USER_AGENT = 'CLIENT_COMPANY_USER_AGENT';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -34,11 +29,6 @@ class CompanyUserAgentWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCompanyUserAgentClient(Container $container): Container
     {
         $container->set(static::CLIENT_COMPANY_USER_AGENT, function (Container $container) {

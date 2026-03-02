@@ -25,11 +25,6 @@ class CompanyUserAgentWidgetToCompanyUserAgentClientBridge implements CompanyUse
         $this->companyUserAgentClient = $companyUserAgentClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserCriteriaTransfer $companyUserCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserCollectionTransfer
-     */
     public function getCompanyUserCollectionByCriteria(CompanyUserCriteriaTransfer $companyUserCriteriaTransfer): CompanyUserCollectionTransfer
     {
         return $this->companyUserAgentClient->getCompanyUserCollectionByCriteria($companyUserCriteriaTransfer);

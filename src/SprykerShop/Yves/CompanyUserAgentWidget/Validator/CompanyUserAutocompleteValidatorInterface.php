@@ -11,10 +11,5 @@ use Symfony\Component\Validator\ConstraintViolationListInterface;
 
 interface CompanyUserAutocompleteValidatorInterface
 {
-    /**
-     * @param array $query
-     *
-     * @return \Symfony\Component\Validator\ConstraintViolationListInterface
-     */
     public function validate(array $query): ConstraintViolationListInterface;
 }

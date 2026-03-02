@@ -18,11 +18,6 @@ use Symfony\Component\Validator\ConstraintViolationList;
  */
 class CompanyUserAutocompleteController extends AbstractController
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function indexAction(Request $request): Response
     {
         $response = $this->executeIndexAction($request);
@@ -30,11 +25,6 @@ class CompanyUserAutocompleteController extends AbstractController
         return $response;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     protected function executeIndexAction(Request $request): Response
     {
         $queryParams = $request->query->all();
@@ -64,11 +54,6 @@ class CompanyUserAutocompleteController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\Validator\ConstraintViolationList $constraintViolationList
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     protected function getErrorResponse(ConstraintViolationList $constraintViolationList): Response
     {
         $errors = [];

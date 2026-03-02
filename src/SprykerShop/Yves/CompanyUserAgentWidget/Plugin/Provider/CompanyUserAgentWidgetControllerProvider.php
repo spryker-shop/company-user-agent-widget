@@ -20,11 +20,6 @@ class CompanyUserAgentWidgetControllerProvider extends AbstractYvesControllerPro
      */
     protected const ROUTE_COMPANY_USER_AUTOCOMPLETE = 'agent/company-user/autocomplete';
 
-    /**
-     * @param \Silex\Application $app
-     *
-     * @return void
-     */
     protected function defineControllers(Application $app): void
     {
         $this->addCompanyUserAutocompleteRoute();

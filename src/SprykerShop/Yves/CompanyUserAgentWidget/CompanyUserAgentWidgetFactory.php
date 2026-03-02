@@ -19,9 +19,6 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  */
 class CompanyUserAgentWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\CompanyUserAgentWidget\Validator\CompanyUserAutocompleteValidatorInterface
-     */
     public function createCompanyUserAutocompleteValidator(): CompanyUserAutocompleteValidatorInterface
     {
         return new CompanyUserAutocompleteValidator(
@@ -29,17 +26,11 @@ class CompanyUserAgentWidgetFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Validator\ValidatorInterface
-     */
     public function getValidator(): ValidatorInterface
     {
         return Validation::createValidator();
     }
 
-    /**
-     * @return \SprykerShop\Yves\CompanyUserAgentWidget\Dependency\Client\CompanyUserAgentWidgetToCompanyUserAgentClientInterface
-     */
     public function getCompanyUserAgentClient(): CompanyUserAgentWidgetToCompanyUserAgentClientInterface
     {
         return $this->getProvidedDependency(CompanyUserAgentWidgetDependencyProvider::CLIENT_COMPANY_USER_AGENT);
